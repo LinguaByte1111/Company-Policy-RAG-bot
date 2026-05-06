@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+# Environment
+.env
+*.env
+
+# ChromaDB (vector store — regenerate from PDF)
+chroma_db/
+
+# Uploaded policy files
+data/policies/*.pdf
+
+# Node
+node_modules/
+frontend/build/
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+*.swp
