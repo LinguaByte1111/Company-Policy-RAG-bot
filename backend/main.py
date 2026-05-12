@@ -150,3 +150,8 @@ async def ask_question(body: QuestionRequest):
     except Exception as e:
         logger.error(f"Q&A failed: {e}")
         raise HTTPException(status_code=500, detail=f"Failed to generate answer: {str(e)}")
+    
+if __name__ == "__main__":
+    import uvicorn
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port)
