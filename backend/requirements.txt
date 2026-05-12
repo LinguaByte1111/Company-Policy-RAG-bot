@@ -4,8 +4,12 @@ python-multipart
 langchain
 langchain-community
 langchain-openai
-chromadb
+langchain-groq
+langchain-core
+langchain-text-splitters
+chromadb==0.4.24
 pymupdf
 python-dotenv
 openai
 tiktoken
+sentence-transformers
