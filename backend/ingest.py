@@ -39,7 +39,8 @@ def split_documents(documents: List[Document]) -> List[Document]:
 def get_embeddings():
     return CohereEmbeddings(
         cohere_api_key=os.getenv("COHERE_API_KEY"),
-        model="embed-english-light-v3.0"
+        model="embed-english-light-v3.0",
+        user_agent="langchain"
     )
 
 def embed_and_store(docs: List[Document]) -> Chroma:
