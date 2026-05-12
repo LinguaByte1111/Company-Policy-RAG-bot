@@ -95,7 +95,8 @@ export default function UploadPanel({ onUploadComplete }) {
     }, 400);
 
     try {
-      const res = await fetch("/upload", { method: "POST", body: formData });
+      const API = process.env.REACT_APP_API_URL || "";
+      const res = await fetch(`${API}/upload`, { method: "POST", body: formData });
       clearInterval(ticker);
 
       if (!res.ok) {
