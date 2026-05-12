@@ -22,7 +22,8 @@ export default function App() {
 
   // Check if policy already loaded on server
   useEffect(() => {
-    fetch("/status")
+    const API = process.env.REACT_APP_API_URL || "";
+    fetch(`${API}/status`)
       .then((r) => r.json())
       .then((data) => {
         if (data.policy_loaded) {
@@ -54,7 +55,8 @@ export default function App() {
     setMessages((prev) => [...prev, { role: "bot", typing: true }]);
 
     try {
-      const res = await fetch("/ask", {
+      const API = process.env.REACT_APP_API_URL || "";
+      const res = await fetch(`${API}/ask`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question: text }),
