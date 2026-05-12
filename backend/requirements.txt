@@ -13,3 +13,5 @@ python-dotenv
 openai
 tiktoken
 sentence-transformers
+cohere
+langchain-cohere
