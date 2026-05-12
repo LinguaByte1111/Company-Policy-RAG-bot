@@ -4,7 +4,7 @@ from typing import List
 from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import Chroma
-from langchain_community.embeddings import CohereEmbeddings
+from langchain_cohere import CohereEmbeddings
 
 CHROMA_DIR = "./chroma_db"
 COLLECTION_NAME = "policy_docs"
